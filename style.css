@@ -1,0 +1,155 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    padding: 0%;
+    background-image: url('images/backgroundimage.jpg') ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:100%;
+}
+.container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 40%;
+    height: 700px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.541);
+}
+.container h3 {
+    font-family: Dancing Script;
+    text-align: center;
+}
+ul li {
+    list-style: none;
+}
+.container .task {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    right: 5%;
+    padding-left: 2%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task .editbutton {
+    background-image: url('images/edit.png');
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.task:hover .editbutton {
+    display: block;
+    cursor: pointer;
+}
+.container .deletebutton {
+    background-image: url('images/delete.png');
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+.task:hover .deletebutton {
+    display: block;
+    cursor: pointer;
+}
+.task {
+    display: flex;
+    flex-direction: row;
+}
+.task .checkbox {
+    flex: 2;
+}
+.task .titletaask {
+    flex: 3;
+    padding-left: 5%;
+    display: block;
+}
+#add {
+    position: absolute;
+    bottom:   0;
+    margin-bottom: 5%;
+    left: 40%;
+}
+.taskdetails {
+    position: fixed;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.541);
+    transform: scale(0.001);
+    border: 2px solid black;
+}
+.taskdetails h3 {
+    padding-top: 5%;
+    font-family: Dancing Script;
+    text-align: center;
+}
+form {
+    padding-left: 5%;
+}
+form input {
+    width: 95%;
+}
+textarea {
+    width: 95%;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.taskdetails.show {
+    transition: transform 0.5s ease-in-out; /* Add a smooth transition */
+    transform: scale(1) translate(5%, -50%);
+}
+.completed {
+    text-decoration: line-through; 
+}
+.todo {
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.done {
+    height: 20%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.task .details {
+    display: none;
+}
+.edit-div {
+    position: fixed;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.541);
+    padding-left: 5%;
+    padding-top: 5%;
+    border: 2px solid black;
+    z-index: 1;
+}
+.done .task .editbutton,
+.done .task .deletebutton {
+    display: none;
+}
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
